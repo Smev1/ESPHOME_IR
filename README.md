@@ -108,7 +108,7 @@ All buttons defined in `hdmi-switcher-ir.yaml` will appear in the web interface.
 - **Debugging:** Use the ESPHome logger to confirm button presses are being triggered.
 
 ---
-##Case
+## Case
 
 Additonally there is a case available in the releases page and on nexprint
 
