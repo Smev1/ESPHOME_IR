@@ -54,7 +54,7 @@ The ESP32 runs ESPHome to transmit IR codes to the HDMI switch.
    - OTA password  (Line 20)
    - API encryption key  (Line 16)
    - Raw IR codes for your HDMI inputs
-  > **Note:** To find teh OTA and API key just make a blank yaml config in ESPHOME
+  > **Note:** To find the OTA and API key just make a blank yaml config in ESPHOME
 
 3. Upload the YAML to the ESP32 via OTA or USB.  
 
