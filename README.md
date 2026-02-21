@@ -50,14 +50,16 @@ The ESP32 runs ESPHome to transmit IR codes to the HDMI switch.
 
 1. Copy `hdmi-switcher-ir.yaml` (provided separately) to your ESPHome folder.  
 2. Fill in the placeholders for:
-   - Wi-Fi credentials  
-   - OTA password  
-   - API encryption key  
-   - Raw IR codes for your HDMI inputs  
+   - Wi-Fi credentials  (Change in ESPHOME settings)
+   - OTA password  (Line 20)
+   - API encryption key  (Line 16)
+   - Raw IR codes for your HDMI inputs
+  > **Note:** To find teh OTA and API key just make a blank yaml config in ESPHOME
 
 3. Upload the YAML to the ESP32 via OTA or USB.  
 
 > **Note:** The raw IR codes can be captured using the Arduino setup below.
+> **Note:** The current IR signals are configured for a UGREEN HDMI Switcher
 
 ---
 
