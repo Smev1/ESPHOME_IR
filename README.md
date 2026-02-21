@@ -82,6 +82,7 @@ The Arduino is used to read raw IR signals from your HDMI remote and format them
 3. Copy the outputted array (e.g., `[8850, -4500, 550, -550, ...]`).  
 4. Paste it into the corresponding button in `hdmi-switcher-ir.yaml`.  
 5. Save and upload your updated YAML to the ESP32.
+6. Make sure to refer to [IRremote Arduino Library](https://github.com/Arduino-IRremote/Arduino-IRremote) to add new features
 
 ---
 
