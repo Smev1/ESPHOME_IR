@@ -48,7 +48,7 @@ The ESP32 runs ESPHome to transmit IR codes to the HDMI switch.
 
 ### How to Use
 
-1. Copy `hdmi-switcher-ir.yaml` (provided separately) to your ESPHome folder.  
+1. Copy `hdmi-switcher-ir.yaml` ([Download](https://github.com/Smev1/ESPHOME_IR/releases/download/Main/hdmi-switcher-ir.yaml)) to your ESPHome folder.  
 2. Fill in the placeholders for:
    - Wi-Fi credentials  (Change in ESPHOME settings)
    - OTA password  (Line 20)
@@ -70,7 +70,7 @@ The Arduino is used to read raw IR signals from your HDMI remote and format them
 ### How to Use
 
 1. Connect your IR receiver to Arduino Pin 4.  
-2. Upload `ir_capture.ino` (provided separately) to the Arduino.  
+2. Upload `ir_capture.ino` ([Download](https://github.com/Smev1/ESPHOME_IR/releases/download/Main/ir_capture.ino)) to the Arduino.  
 3. Open the Serial Monitor at **115200 baud**.  
 4. Press a button on your HDMI remote.  
 5. Copy the array output from the Serial Monitor. This is the exact format needed for `transmit_raw` in ESPHome.
