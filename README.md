@@ -15,9 +15,10 @@ The goal is to make this setup open-source, easy to reproduce, and fully documen
 3. [Arduino IR Capture](#arduino-ir-capture)  
 4. [Capturing and Adding New IR Codes](#capturing-and-adding-new-ir-codes)  
 5. [Web Interface & Buttons](#web-interface--buttons)  
-6. [Tips & Troubleshooting](#tips--troubleshooting)  
-7. [File Structure](#file-structure)
-
+6. [Tips & Troubleshooting](#tips--troubleshooting)
+7. [Case](#case)
+8. [File Structure](#file-structure)
+9. [License](#license)
 ---
 
 ## Hardware Requirements
@@ -96,6 +97,7 @@ The ESPHome web server allows you to:
 - Test IR codes without integrating into Home Assistant  
 
 All buttons defined in `hdmi-switcher-ir.yaml` will appear in the web interface.
+And you should be able to access the device web ui from hdmi-switcher-ir.local (or whatever you rename the yaml)
 
 ---
 
