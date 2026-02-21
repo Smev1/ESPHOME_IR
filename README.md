@@ -1,7 +1,7 @@
 
 # HDMI Switcher IR Controller
 
-This project allows you to control an HDMI switch via IR using an **ESP32** running ESPHome.  
+This project allows you to control an HDMI switch (or any IR controlled device) using an **ESP32** running ESPHome.  
 It also provides a way to **capture IR codes with an Arduino Uno R3**, so you can easily copy them into the ESPHome configuration.  
 
 The goal is to make this setup open-source, easy to reproduce, and fully documented.
@@ -26,14 +26,21 @@ The goal is to make this setup open-source, easy to reproduce, and fully documen
 
 - ESP32 Dev Board (ESP32-DevKitC or similar)  
 - IR LED connected to **GPIO13**
+- ESPHhome already installed
+<img width="407" height="499" alt="image" src="https://github.com/user-attachments/assets/84baa4fb-bcda-4b1c-ac1d-9ebdaa449f2c" />
+
+Note: Check the datasheet of your IR LED to see what pins will be connected to GND and GPIO13
 
 **Arduino Side (IR Receiver for Capturing Codes):**
 
 - Arduino Uno R3  
-- IR Receiver module connected to **Pin 4**  
-- Optional: 10kΩ pull-up resistor  
+- IR Receiver module connected to **Pin 4**
 
----
+<img width="898" height="630" alt="Screenshot 2026-02-21 102123" src="https://github.com/user-attachments/assets/5e805012-77be-43ac-8f84-536901dd16a8" />
+
+Note: Check the datasheet of your IR Reciver to see what pins will be connected to GND and GPIO4
+  
+
 
 ## ESPHome Setup
 
