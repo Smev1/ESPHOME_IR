@@ -1,0 +1,81 @@
+esphome:
+  name: hdmi-switcher-ir
+  friendly_name: HDMI Switcher IR
+
+esp32:
+  board: esp32dev
+  framework:
+    type: esp-idf
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "KEY HERE"
+
+ota:
+  - platform: esphome
+    password: "PASS HERE"
+
+
+web_server:
+  port: 80
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+  use_address: 192.168.68.65
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Hdmi-Switcher-Ir"
+    password: "vASdPsP2T7Hc"
+
+captive_portal:
+    
+# 1. Define the IR Transmitter Hardware
+remote_transmitter:
+  pin: GPIO13
+  carrier_duty_percent: 50%
+
+# 2. Define the Button for the Web UI
+button:
+  - platform: template
+    name: "HDMI 1"
+    on_press:
+      - remote_transmitter.transmit_raw:
+          carrier_frequency: 38kHz
+          # Cleaned and formatted from your 18:50:54 capture
+          code: [8850, -4500, 550, -550, 550, -550, 600, -500, 600, -550, 550, -550, 550, -550, 550, -550, 550, -1650, 600, -1650, 550, -1650, 550, -1650, 600, -1650, 550, -1650, 550, -1650, 550, -1650, 600, -550, 550, -1650, 550, -550, 550, -1650, 600, -550, 550, -550, 550, -550, 550, -550, 550, -550, 600, -500, 600, -1650, 550, -550, 550, -1650, 550, -1700, 550, -1650, 550, -1650, 550, -1650, 600]
+          
+  - platform: template
+    name: "HDMI 2"
+    on_press:
+      - remote_transmitter.transmit_raw:
+          carrier_frequency: 38kHz
+          # Cleaned and formatted from your 18:50:54 capture
+          code: [8850, -4500, 550, -550, 550, -550, 550, -550, 600, -550, 550, -550, 550, -550, 550, -550, 550, -1650, 600, -1650, 550, -1650, 550, -1650, 600, -1650, 550, -1650, 550, -1650, 550, -1700, 550, -550, 550, -1650, 550, -550, 550, -550, 600, -1650, 550, -550, 550, -550, 550, -550, 550, -550, 600, -500, 600, -1650, 550, -1650, 550, -550, 600, -1650, 550, -1650, 600, -1600, 550, -1650, 600]
+  - platform: template
+    name: "HDMI 3"
+    on_press:
+      - remote_transmitter.transmit_raw:
+          carrier_frequency: 38kHz
+          # Cleaned and formatted from your 18:50:54 capture
+          code: [8950, -4400, 600, -550, 550, -550, 550, -550, 600, -550, 550, -550, 550, -550, 550, -550, 550, -1650, 600, -1650, 550, -1650, 550, -1650, 600, -1650, 550, -1650, 550, -1650, 600, -1650, 550, -550, 550, -1650, 550, -1650, 600, -1650, 550, -550, 550, -550, 550, -550, 550, -550, 600, -550, 550, -550, 550, -550, 550, -550, 550, -1650, 600, -1650, 550, -1650, 550, -1650, 600, -1650, 550]
+
+  - platform: template
+    name: "HDMI 4"
+    on_press:
+      - remote_transmitter.transmit_raw:
+          carrier_frequency: 38kHz
+          # Cleaned and formatted from your 18:50:54 capture
+          code: [8850, -4500, 550, -550, 550, -550, 550, -550, 600, -500, 600, -550, 550, -550, 550, -550, 550, -1650, 600, -1650, 550, -1650, 550, -1650, 600, -1650, 550, -1650, 550, -1650, 550, -1700, 550, -550, 550, -1700, 500, -1700, 550, -550, 550, -1650, 550, -1700, 500, -550, 600, -500, 600, -550, 550, -550, 550, -550, 550, -1700, 550, -500, 600, -550, 550, -1650, 550, -1650, 550, -1700, 550]
+  - platform: template
+    name: "HDMI 5"
+    on_press:
+      - remote_transmitter.transmit_raw:
+          carrier_frequency: 38kHz
+          # Cleaned and formatted from your 18:50:54 capture
+          code: [8850, -4500, 550, -550, 550, -550, 600, -500, 600, -550, 550, -550, 550, -550, 550, -550, 550, -1700, 550, -1650, 550, -1650, 550, -1700, 550, -1650, 550, -1650, 550, -1700, 550, -1650, 550, -550, 550, -550, 550, -550, 550, -550, 550, -1700, 550, -550, 550, -550, 550, -550, 550, -550, 550, -1700, 550, -1650, 550, -1700, 500, -550, 550, -1700, 550, -1650, 550, -1700, 500, -1700, 550]
