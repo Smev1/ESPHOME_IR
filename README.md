@@ -112,7 +112,7 @@ And you should be able to access the device web ui from hdmi-switcher-ir.local (
 ---
 ## Case
 
-Additonally there is a case available in the releases page and on nexprint
+Additonally there is a case available on nexprint (coming soon)
 
 ---
 
